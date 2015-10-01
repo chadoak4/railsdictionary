@@ -5,10 +5,14 @@ class DefinitionsController < ApplicationController
   # GET /definitions.json
   def index
     @definitions = Definition.all
-    # @defsearch = definition.search(params[:search])
 
   end
+  def search
+    @search = params[:search]
+    @definitions= Definition.where("word LIKE ?", "%#{@search}%")
 
+    render :index
+  end
   # GET /definitions/1
   # GET /definitions/1.json
   def show

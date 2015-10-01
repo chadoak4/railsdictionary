@@ -11,9 +11,14 @@ body {
 
 }
 
+header #search{
+  display: inline-block;
+  position: relative;
+  left: 50px;
+}
+
 header{
-  background-color: #040017;
-  // #060024;
+  background-color: #060024;
   text-align: left;
   border-bottom-style: solid;
   border-bottom-width: 5px;
